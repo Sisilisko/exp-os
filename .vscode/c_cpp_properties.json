@@ -4,7 +4,7 @@
             "name": "Linux",
             "includePath": [
                 "${workspaceFolder}/**",
-                "${workspaceFolder}/interface",
+                "${workspaceFolder}/kernel/api",
                 "${workspaceFolder}/bootloader/Limine",
                 "${workspaceFolder}/kernel"
             ],

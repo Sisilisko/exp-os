@@ -18,7 +18,8 @@
         "context.h": "c",
         "limine.h": "c",
         "pmm.h": "c",
-        "serial.h": "c"
+        "serial.h": "c",
+        "memory.h": "c"
     },
     "makefile.configureOnOpen": false
 }
