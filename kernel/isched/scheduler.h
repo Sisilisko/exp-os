@@ -29,15 +29,16 @@ typedef struct Context
 
 typedef struct Process
 {
-    uint32_t id;
+    uint32_t pd; // This is Process Descriptor (pd) Not anything else!
     EProcType type;
-    ctx_t *context;
-
+    uint64_t wait_time;
+    bool is_running;
+    char *executable; // TODO: Implement file system so we can finally execute someo... Something :P
 } process_t;
 
 process_t *evaluate_processes();
 
-process_t *create_process(EProcType process_type);
+process_t *create_process(EProcType process_type, int argc, char **argv);
 
 void terminate_process(process_t *terminatable_process);
 

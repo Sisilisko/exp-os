@@ -17,8 +17,8 @@ void _start(void) {
     pit_init(1193182);
 
     // Two hard coded processes (FOR TESTING ONLY!):
-    process_t *proc1 = create_process(KERNEL);
-    process_t *proc2 = create_process(USER);
+    process_t *proc1 = create_process(KERNEL, NULL, NULL);
+    process_t *proc2 = create_process(USER, NULL, NULL);
     // Then we evaluate them:
     process_t *process_to_continue = evaluate_processes();
     // Then we shall continue the one with higher priority &| wait time:

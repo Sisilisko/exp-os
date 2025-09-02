@@ -13,6 +13,7 @@
         "init_util.h": "c",
         "idt.h": "c",
         "gdt.h": "c",
-        "timing.h": "c"
+        "timing.h": "c",
+        "scheduler.h": "c"
     }
 }
