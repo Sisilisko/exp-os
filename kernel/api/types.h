@@ -23,9 +23,8 @@
 #define PRINTF_ALIAS_STANDARD_FUNCTION_NAMES 1
 
 #include "limine.h"
-#include "pmm.h"
 #include "printf.h"
-#include "serial.h"
+
 
 
 #endif
