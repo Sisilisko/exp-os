@@ -1,0 +1,1 @@
+Drivers in this directory are ONLY drivers that cant be separated from the kernel. Or in other words: These are the only builtin drivers.

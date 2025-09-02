@@ -1,0 +1,18 @@
+{
+    "files.associations": {
+        "printf.h": "c",
+        "stddef.h": "c",
+        "stdbool.h": "c",
+        "stdint.h": "c",
+        "cstdio": "c",
+        "types.h": "c",
+        "compare": "c",
+        "cstdint": "c",
+        "pci.h": "c",
+        "random": "c",
+        "init_util.h": "c",
+        "idt.h": "c",
+        "gdt.h": "c",
+        "timing.h": "c"
+    }
+}
