@@ -1,4 +1,4 @@
-#include "init_util.h"
+#include "api/common/memory.h"
 
 void memset(void *_dst, int val, size_t len) {
   asm volatile("pushf; cld; rep stosb; popf"

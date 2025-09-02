@@ -19,7 +19,9 @@
         "limine.h": "c",
         "pmm.h": "c",
         "serial.h": "c",
-        "memory.h": "c"
+        "memory.h": "c",
+        "modapi.h": "c"
     },
-    "makefile.configureOnOpen": false
+    "makefile.configureOnOpen": false,
+    "C_Cpp.default.compilerPath": "/usr/bin/gcc"
 }
