@@ -1,9 +1,9 @@
-#include "types.h"
-#include "isched/context.h"
+#include "common/types.h"
+#include "context.h"
 
 
 void save_context(ctx_t *ctx, void (*rip)(void)) {
-    asm volatile (
+    __asm__ __volatile__ (
         "movq %%rsp, %0\n\t"
         "movq %%rbx, %1\n\t"
         "movq %%rbp, %2\n\t"
@@ -21,7 +21,7 @@ void save_context(ctx_t *ctx, void (*rip)(void)) {
 }
 
 void restore_context(ctx_t *ctx) {
-    asm volatile (
+    __asm__ __volatile__ (
         "movq %0, %%rsp\n\t"
         "movq %1, %%rbx\n\t"
         "movq %2, %%rbp\n\t"

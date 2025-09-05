@@ -1,14 +1,14 @@
-#include "api/common/memory.h"
+#include "common/memory.h"
 
 void memset(void *_dst, int val, size_t len) {
-  asm volatile("pushf; cld; rep stosb; popf"
+  __asm__ __volatile__("pushf; cld; rep stosb; popf"
                :
                : "D"(_dst), "a"(val), "c"(len)
                : "memory");
 }
 
 void *memcpy(void *restrict dstptr, const void *restrict srcptr, size_t size) {
-  asm volatile("pushf; cld; rep movsb; popf"
+  __asm__ __volatile__("pushf; cld; rep movsb; popf"
                :
                : "S"(srcptr), "D"(dstptr), "c"(size)
                : "memory");

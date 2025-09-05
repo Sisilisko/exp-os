@@ -1,7 +1,7 @@
 #ifndef IDT_H
 #define IDT_H
 
-#include "types.h"
+#include "common/types.h"
 
 typedef struct {
   uint16_t isr_low;

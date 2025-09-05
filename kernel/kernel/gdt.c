@@ -1,6 +1,6 @@
 #include <gdt.h>
 
-#include "init_util.h"
+
 
 // GDT & TSS Entry configurator
 // Copyright (C) 2024 Panagiotis
@@ -22,11 +22,11 @@ void gdt_load_tss(TSSPtr *tss) {
   gdt.tss.base_upper32 = (uint32_t)(addr >> 32);
   gdt.tss.reserved = 0;
 
-  asm volatile("ltr %0" : : "rm"((uint16_t)0x58) : "memory");
+  __asm__ __volatile__("ltr %0" : : "rm"((uint16_t)0x58) : "memory");
 }
 
 void gdt_reload() {
-  asm volatile("lgdt %0\n\t"
+  __asm__ __volatile__("lgdt %0\n\t"
                "push $0x28\n\t"
                "lea 1f(%%rip), %%rax\n\t"
                "push %%rax\n\t"

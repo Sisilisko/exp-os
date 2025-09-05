@@ -1,5 +1,5 @@
 #include "timing.h"
-#include "types.h"
+#include "common/types.h"
 // Ports
 #define PIT_CHANNEL0 0x40
 #define PIT_COMMAND  0x43
@@ -9,7 +9,7 @@
 
 // Write a byte to an I/O port
 void outbyte(uint16_t port, uint8_t val) {
-    asm volatile ("outb %0, %1" : : "a"(val), "Nd"(port));
+    __asm__ __volatile__ ("outb %0, %1" : : "a"(val), "Nd"(port));
 }
 
 // Setup PIT to generate IRQ0 at given frequency

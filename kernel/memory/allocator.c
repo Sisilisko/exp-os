@@ -1,12 +1,12 @@
-#include "types.h"
-#include "memory.h"
+#include "common/types.h"
+#include "common/memory.h"
 
-void *mmap(size_t requested_amount) {
-    
+void *mmap(/*size_t requested_amount*/) {
+    return (void*)alloc_page();
 
 }
 
-void munmap(void *freeable_ptr, size_t regions) {
-
-    
+void munmap(physaddr_t *freeable_ptr /* size_t regions*/ ) {
+    free_page(*freeable_ptr);
+    return;
 }

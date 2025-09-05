@@ -1,8 +1,6 @@
 #include <gdt.h>
 #include <idt.h>
 
-#include "init_util.h"
-
 // IDT Entry configurator
 // Copyright (C) 2024 Panagiotis
 
@@ -23,5 +21,5 @@ void set_idt_gate(int n, uint64_t handler, uint8_t flags) {
 void set_idt() {
   idt_reg.base = (size_t)&idt;
   idt_reg.limit = IDT_ENTRIES * sizeof(idt_gate_t) - 1;
-  asm volatile("lidt %0" ::"m"(idt_reg) : "memory");
+  __asm__ __volatile__("lidt %0" ::"m"(idt_reg) : "memory");
 }

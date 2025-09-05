@@ -1,7 +1,7 @@
 #ifndef CONTEXT_H
 #define CONTEXT_H
 
-#include "types.h"
+#include "common/types.h"
 
 typedef struct Context
 {

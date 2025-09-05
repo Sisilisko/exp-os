@@ -2,7 +2,7 @@
 #define SCHEDULER_H
 
 #include "context.h"
-#include "types.h"
+#include "common/types.h"
 #define MAX_AMOUNT_OF_PROCESSES 1000
 
 typedef enum { KERNEL, USER, UI, DAEMON } EProcType;
@@ -21,9 +21,9 @@ typedef struct Process
 void jump_to();
 void return_back();
 
-process_t *evaluate_processes();
+void evaluate_loop();
 
-process_t *create_process(EProcType process_type, int argc, char **argv);
+process_t *create_process(EProcType process_type /* int argc, char **argv */);
 
 void terminate_process(process_t *terminatable_process);
 

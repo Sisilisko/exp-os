@@ -19,8 +19,6 @@
 
 #define force_inline inline __attribute__((always_inline))
 
-#define PRINTF_ALIAS_STANDARD_FUNCTION_NAMES_SOFT 1
-#define PRINTF_ALIAS_STANDARD_FUNCTION_NAMES 1
 
 #include "limine.h"
 #include "printf.h"

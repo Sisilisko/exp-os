@@ -10,7 +10,7 @@ ctx_t jump_back_context; // The Old Context, where to return.
 bool interrupted = false;
 
 void switch_context() {
-    save_context(&switch_context, &&back_point);
+    save_context(&jump_context, &&back_point);
     restore_context(&jump_back_context);
 
 back_point:
@@ -36,8 +36,8 @@ void evaluate_loop() {
     interrupted = false;
 }
 
-process_t *create_process(EProcType process_type, int argc, char *argv[]) {
-    process_t *proc;
+process_t *create_process(EProcType process_type /* int argc, char *argv[] */) {
+    process_t *proc = NULL;
     proc->type = process_type;
     proc->wait_time = 0;
     proc->is_running = true;

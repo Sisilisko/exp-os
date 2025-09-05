@@ -1,4 +1,5 @@
-#include "types.h"
+#include "common/types.h"
+#include "common/memory.h"
 
 #ifndef GDT_H
 #define GDT_H

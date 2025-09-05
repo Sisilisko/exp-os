@@ -9,8 +9,8 @@
 typedef uintptr_t physaddr_t;
 
 // Memory Syscalls:
-void *mmap(size_t requested_amount);
-void munmap(void *freeable_ptr, size_t regions);
+void *mmap(/*size_t requested_amount*/);
+void munmap(physaddr_t *freeable_ptr /* size_t regions*/);
 
 // __placeholder_allocator__: (Paging is only allocation way, for now...):
 physaddr_t alloc_page(void);
